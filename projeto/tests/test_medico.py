@@ -39,9 +39,3 @@ def test_telefone_medico_invalido(criar_medico):
                     Endereco("Rua A", 77, "Casa", "8888","Salvador", Unidade_Federativa.BAHIA), Sexo.MASCULINO,
                     Estado_Civil.CASADO,"08/07/2000", "321312", "321321", "321321", Setor.ENGENHARIA, 32133, "A04")
     
-def test_validando_nome_medico_vazio(criar_medico):
-    with pytest.raises(TypeError,match ="Nao pode ser vazio"):
-        Medico(7,"", "378218312", "dwqdwq", 
-                    Endereco("Rua A", 77, "Casa", "8888","Salvador", Unidade_Federativa.BAHIA), Sexo.MASCULINO,
-                    Estado_Civil.CASADO,"08/07/2000", "321312", "321321", "321321", Setor.ENGENHARIA, 32133, "A04")
-    

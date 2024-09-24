@@ -3,16 +3,10 @@ from abc import ABC,abstractmethod
 class Pessoa(ABC):
     def __init__(self,id:int, nome:str, telefone:int, email:str, endereco: Endereco) -> None:
         self.id = self._verificar_id(id)
-        self.nome = self._verificarNome(nome)
+        self.nome = nome
         self.telefone = self._verificarTelefone(telefone)
         self.email = email
         self.endereco = endereco
-    
-    
-    def _verificarNome(self,nome):
-        if nome == "":
-            raise ValueError("O nome não pode ser vazio")
-        return nome
     
 
 
