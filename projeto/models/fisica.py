@@ -9,6 +9,7 @@ class Fisica(Pessoa, ABC):
         self.sexo = sexo
         self.estadoCivil = estadoCivil
         self.dataNascimento = dataNascimento
+    
     @abstractmethod
     def __str__(self) -> str:
         return (f"{super().__str__()}"
